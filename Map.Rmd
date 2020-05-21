@@ -1,0 +1,21 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+date <- Sys.Date()
+```
+
+## `r date`
+
+```{r, echo=FALSE, warning=FALSE}
+library(leaflet)
+map <- leaflet() %>% addTiles() %>% addMarkers(lat = 28.7041, lng = 77.1025)
+map
+```
+
+
